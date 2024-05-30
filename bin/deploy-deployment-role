@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+aws cloudformation deploy \
+    --template-file ./deploy/deploy-role-template.yaml \
+    --capabilities CAPABILITY_IAM \
+    --stack-name dylanp-dev-deployment-role \
+    --profile AdministratorAccess-211125554115
