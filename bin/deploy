@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+aws cloudformation deploy \
+    --template-file ./deploy/template.yaml \
+    --capabilities CAPABILITY_IAM \
+    --parameter-overrides \
+    OauthToken=????
+    Repository=https://github.com/dylanpinn/dylanp.dev \
+    --stack-name TodoApp \
+    --role-arn arn:aws:iam::211125554115:role/dylanp-dev-deployment-role-DeploymentRole-x1GLlzQHLMKb \
+    --profile PowerUserAccess-211125554115
